@@ -55,3 +55,25 @@ try {
 catch (error) {
     console.error(error.message);
 }
+
+//UC3
+class AddressBook {
+    constructor() {
+        this.contacts = [];
+    }
+
+    addContact(contact) {
+        try {
+            validateContact(contact);
+            this.contacts.push(contact);
+            console.log("Contact added successfully.");
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+}
+
+// Create address book
+const myAddressBook = new AddressBook();
+myAddressBook.addContact(contact1);
+console.log(myAddressBook.contacts);
