@@ -108,3 +108,12 @@ AddressBook.prototype.deleteContact = function (firstName, lastName) {
 // Example of deleting contact
 myAddressBook.deleteContact("Rajan", "Chouhan");
 console.log(myAddressBook.contacts);
+
+
+//UC6
+AddressBook.prototype.getNumberOfContacts = function () {
+    return this.contacts.length;
+};
+
+// Example of getting the number of contacts
+console.log("Number of contacts: ", myAddressBook.getNumberOfContacts());
