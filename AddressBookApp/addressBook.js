@@ -93,3 +93,18 @@ AddressBook.prototype.editContact = function (firstName, lastName, newDetails) {
 // Example of editing contact
 myAddressBook.editContact("Rajan", "Chouhan", { phoneNumber: "1234567890" });
 console.log(myAddressBook.contacts);
+
+//UC5
+AddressBook.prototype.deleteContact = function (firstName, lastName) {
+    const index = this.contacts.findIndex(contact => contact.firstName === firstName && contact.lastName === lastName);
+    if (index !== -1) {
+        this.contacts.splice(index, 1);
+        console.log("Contact deleted successfully.");
+    } else {
+        console.log("Contact not found.");
+    }
+};
+
+// Example of deleting contact
+myAddressBook.deleteContact("Rajan", "Chouhan");
+console.log(myAddressBook.contacts);
